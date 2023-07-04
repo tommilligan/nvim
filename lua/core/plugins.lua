@@ -29,14 +29,6 @@ require("packer").startup(function()
     use("hrsh7th/cmp-path")
     use("hrsh7th/cmp-cmdline")
     use("hrsh7th/cmp-nvim-lua")
-    use({
-        "zbirenbaum/copilot.lua",
-        cmd = "Copilot",
-        event = "InsertEnter",
-        config = function()
-            require("configs.copilot")
-        end,
-    })
 
     -- snippets
     use("rafamadriz/friendly-snippets")
@@ -45,12 +37,6 @@ require("packer").startup(function()
     use("nvim-lua/plenary.nvim")
     use("jose-elias-alvarez/null-ls.nvim")
     use("tpope/vim-surround")
-    use({
-        "windwp/nvim-autopairs",
-        config = function()
-            require("configs/autopairs")
-        end,
-    })
 
     -- Sessions
     use("rmagatti/auto-session")
@@ -140,5 +126,11 @@ require("packer").startup(function()
     use({
         "michaelb/sniprun",
         run = "bash install.sh",
+    })
+
+    -- Colorscheme
+    use({
+        "bluz71/vim-nightfly-colors",
+        name = "nightfly",
     })
 end)

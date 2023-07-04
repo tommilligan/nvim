@@ -26,9 +26,6 @@ local function filesize()
 end
 
 lualine.setup({
-    options = {
-        theme = "onedark",
-    },
     sections = {
         lualine_c = {
             "lsp_progress",

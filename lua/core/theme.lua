@@ -1,5 +1,2 @@
-require("onedark").setup({
-    style = "dark",
-})
-
-require("onedark").load()
+-- Lua initialization file
+vim.cmd [[colorscheme nightfly]]

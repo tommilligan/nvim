@@ -4,11 +4,8 @@ vim.opt.termguicolors = true
 -- Set line numbers
 vim.opt.number = true
 
--- Also display the relative numbers surrounding
-vim.opt.relativenumber = true
-
 -- Set a ruler at 80 chars
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "80,81,82,83,84"
 
 -- Highlight the current line the cursor is on
 vim.opt.cursorline = true
@@ -35,7 +32,7 @@ vim.opt.ignorecase = true
 vim.opt.writebackup = false
 
 -- Connection to the system clipboard
-vim.opt.clipboard = "unnamedplus"
+vim.opt.clipboard = "unnamed,unnamedplus"
 
 -- Options for insert mode completion
 vim.opt.completeopt = { "menu", "menuone", "noselect" }
@@ -46,8 +43,8 @@ vim.opt.showmode = false
 -- Reduce the updatetime of vim
 vim.opt.updatetime = 100
 
--- Disable word wrapping
-vim.opt.wrap = false
+-- Enable word wrapping
+vim.opt.wrap = true
 
 vim.g.mapleader = " "
 
