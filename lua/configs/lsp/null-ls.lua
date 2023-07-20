@@ -33,6 +33,8 @@ local sources = {
             "yaml",
             "markdown",
             "graphql",
+            "typescript",
+            "typescriptreact",
         },
     }),
 
