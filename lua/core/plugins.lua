@@ -98,14 +98,17 @@ require("packer").startup(function()
     })
 
     -- Searching
-    use("nvim-telescope/telescope.nvim")
+
+    -- fzf
+    -- Lua nice api wrapping
     use({
-        "nvim-telescope/telescope-fzf-native.nvim",
-        run = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
-        config = function()
-            require("configs.nvim-telescope")
-        end,
+        "ibhagwan/fzf-lua",
+        -- optional for icon support
+        requires = { "nvim-tree/nvim-web-devicons" },
     })
+    -- base package, just installs fzf
+    use({ "junegunn/fzf", run = "./install --bin" })
+
     use("tpope/vim-abolish")
     use({
         "nvim-pack/nvim-spectre",

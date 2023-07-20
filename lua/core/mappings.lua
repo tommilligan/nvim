@@ -2,14 +2,13 @@ local utils = require("utils")
 -- Rebind Ctrl+L to ESC
 vim.keymap.set("i", "<C-l>", "<ESC>")
 
--- TELESCOPE --
+-- fzf
 vim.keymap.set("n", "<C-p>", function()
-    -- Use Ctrl+P to search through file names
-    require("telescope.builtin").find_files()
-end)
+    require("fzf-lua").git_files()
+end, { silent = true })
 vim.keymap.set("n", "<C-f>", function()
     -- Use Ctrl-F to ripgrep through files
-    require("telescope.builtin").live_grep()
+    require("fzf-lua").live_grep()
 end)
 
 -- NVIM-TREE --

@@ -7,6 +7,9 @@ vim.opt.number = true
 -- Set a ruler at 80 chars
 vim.opt.colorcolumn = "80,81,82,83,84"
 
+-- Change dir to current file
+vim.opt.autochdir = true
+
 -- Highlight the current line the cursor is on
 vim.opt.cursorline = true
 
