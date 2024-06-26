@@ -5,6 +5,15 @@ require("packer").startup(function()
     -- For performance
     use("lewis6991/impatient.nvim")
 
+    -- lua snippet engine
+    use({
+	"L3MON4D3/LuaSnip",
+	-- follow latest release.
+	tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+	-- install jsregexp (optional!:).
+	run = "make install_jsregexp"
+    })
+
     -- Language Server installer
     use("williamboman/mason.nvim")
     use("williamboman/mason-lspconfig.nvim")
@@ -110,12 +119,6 @@ require("packer").startup(function()
     use({ "junegunn/fzf", run = "./install --bin" })
 
     use("tpope/vim-abolish")
-    use({
-        "nvim-pack/nvim-spectre",
-        config = function()
-            require("configs.nvim-spectre")
-        end,
-    })
 
     -- File tree
     use({

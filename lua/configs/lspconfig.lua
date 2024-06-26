@@ -34,9 +34,9 @@ end
 
 local lsp_formatting = function(bufnr)
     vim.lsp.buf.format({
-        filter = function(client)
-            return client.name == "null-ls"
-        end,
+        -- filter = function(client)
+        --     return client.name == "null-ls"
+        -- end,
         bufnr = bufnr,
     })
 end
@@ -86,6 +86,7 @@ capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
 for _, server in ipairs({
     "null-ls",
     "pyright",
+    "ruff",
     "svelte",
     "tsserver",
     "rust",

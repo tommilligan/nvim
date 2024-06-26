@@ -39,24 +39,12 @@ local sources = {
     }),
 
     -- Python
-    diagnostics.flake8.with({
-        cwd = function(params)
-            return vim.fn.fnamemodify(params.bufname, ":h")
-        end,
-        timeout = 10000,
-    }),
-    formatting.isort.with({
-        cwd = function(params)
-            return vim.fn.fnamemodify(params.bufname, ":h")
-        end,
-        timeout = 10000,
-    }),
-    formatting.black.with({
-        cwd = function(params)
-            return vim.fn.fnamemodify(params.bufname, ":h")
-        end,
-        timeout = 10000,
-    }),
+    -- diagnostics.flake8.with({
+    --     cwd = function(params)
+    --         return vim.fn.fnamemodify(params.bufname, ":h")
+    --     end,
+    --     timeout = 10000,
+    -- }),
 
     -- Rust
     formatting.rustfmt,

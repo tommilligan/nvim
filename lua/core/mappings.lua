@@ -19,11 +19,6 @@ vim.keymap.set("n", "<leader>o", "<cmd>NvimTreeFindFile<cr>")
 vim.keymap.set("n", "<C-e>", "<cmd>TroubleToggle document_diagnostics<cr>", { silent = true, noremap = true })
 vim.keymap.set("n", "<C-t>", "<cmd>TroubleToggle workspace_diagnostics<cr>", { silent = true, noremap = true })
 
--- SPECTRE
-vim.keymap.set("n", "<LEADER>S", function()
-    require("spectre").open()
-end)
-
 -- TERMINAL
 vim.keymap.set("t", "<C-l>", "<C-\\><C-n>")
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
