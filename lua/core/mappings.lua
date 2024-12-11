@@ -11,6 +11,9 @@ vim.keymap.set("n", "<C-f>", function()
     require("fzf-lua").live_grep()
 end)
 
+-- Undo tree
+vim.keymap.set('n', '<leader>u', vim.cmd.UndotreeToggle)
+
 -- NVIM-TREE --
 vim.keymap.set("n", "<C-n>", "<cmd>NvimTreeToggle<cr>")
 vim.keymap.set("n", "<leader>o", "<cmd>NvimTreeFindFile<cr>")

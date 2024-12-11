@@ -120,6 +120,9 @@ require("packer").startup(function()
 
     use("tpope/vim-abolish")
 
+    -- Undo tree
+    use("mbbill/undotree")
+
     -- File tree
     use({
         "kyazdani42/nvim-tree.lua",

@@ -49,7 +49,7 @@ vim.opt.updatetime = 100
 -- Enable word wrapping
 vim.opt.wrap = true
 
-vim.g.mapleader = " "
+vim.g.mapleader = "\\"
 
 vim.opt.guicursor = ""
 
