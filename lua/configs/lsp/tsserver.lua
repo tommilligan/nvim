@@ -1,6 +1,4 @@
-local utils = require("utils")
-
-local status_ok, typescript = pcall(require, "typescript")
+local status_ok, lspconfig = pcall(require, "lspconfig")
 if not status_ok then
     return
 end
@@ -8,11 +6,9 @@ end
 local M = {}
 
 M.setup = function(on_attach, capabilities)
-    typescript.setup({
-        server = {
-            on_attach = on_attach,
-            capabilities = capabilities,
-        },
+    lspconfig.ts_ls.setup({
+        on_attach = on_attach,
+        capabilities = capabilities,
     })
 end
 
