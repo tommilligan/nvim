@@ -20,16 +20,6 @@ local utils = require("utils")
 local plugins = {
   -- Some defaults
   "tpope/vim-sensible",
-  {
-    "gbprod/cutlass.nvim",
-    opts = {
-      cut_key = "x",
-      exclude = {
-        -- Don't override oil.nvim "back" button
-        "n-",
-      },
-    },
-  },
 
   -- Utils
   "nvim-lua/plenary.nvim",
@@ -122,6 +112,7 @@ local plugins = {
 
   -- Customisation
   { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+  { "bluz71/vim-nightfly-colors", name = "nightfly", priority = 1000 },
   {
     "nvim-tree/nvim-web-devicons",
 

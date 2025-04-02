@@ -6,7 +6,7 @@ vim.opt.cursorline = true
 vim.opt.cursorlineopt = "number"
 
 vim.opt.number = true
-vim.opt.relativenumber = true
+vim.opt.relativenumber = false
 
 -- Enable mouse support
 vim.opt.mouse = "a"

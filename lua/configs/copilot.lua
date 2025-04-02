@@ -1,4 +1,10 @@
 local status_ok, copilot = pcall(require, "copilot")
+
+-- Disable copilot for now
+if true then
+  return
+end
+
 if not status_ok then
   return
 end

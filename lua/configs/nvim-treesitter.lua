@@ -12,7 +12,8 @@ treesitter.setup({
     "python",
     "rust",
     "typescript",
-    "org",
+    -- Doesn't exist/doesn't work? What is it needed for?
+    -- "org",
   },
   sync_install = false,
   auto_install = true,
