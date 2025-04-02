@@ -68,7 +68,9 @@ local on_attach = function(client, bufnr)
     utils.buf_map(bufnr, "n", "ga", ":LspAct<CR>")
     utils.buf_map(bufnr, "v", "ga", "<Esc><cmd> LspRangeAct<CR>")
 
-    if client.supports_method("textDocument/formatting") then
+    -- Do not format with tsserver, as we want to use prettier instead via null-ls
+    if client.name ~= "ts_ls" and client.supports_method("textDocument/formatting") then
+    	print(client.name)
         vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
         vim.api.nvim_create_autocmd("BufWritePre", {
             group = augroup,

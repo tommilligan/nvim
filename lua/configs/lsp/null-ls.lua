@@ -22,9 +22,10 @@ local sources = {
     -- TS/JS
     code_actions.eslint_d,
     diagnostics.eslint_d,
-    formatting.eslint_d,
+    -- formatting.eslint_d,
     formatting.prettierd.with({
         filetypes = {
+            "javascript",
             "css",
             "scss",
             "less",
