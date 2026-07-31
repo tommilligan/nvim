@@ -18,4 +18,23 @@ return {
       colorscheme = "nightfly",
     },
   },
+
+  -- Ensure additional treesitter languages
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = { ensure_installed = { "rust" } },
+  },
+
+  -- Diagnostics and formatting for Rust files
+  {
+    "mrcjkb/rustaceanvim",
+  },
+  -- Help write Cargo.toml files with right names and versions
+  {
+    "saecki/crates.nvim",
+    tag = "stable",
+    config = function()
+      require("crates").setup()
+    end,
+  },
 }
