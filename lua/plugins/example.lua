@@ -5,6 +5,18 @@
 -- * disable/enabled LazyVim plugins
 -- * override the configuration of LazyVim plugins
 return {
+  {
+    "folke/snacks.nvim",
+    opts = {
+      indent = {
+        scope = {
+          -- Disable annoying visual noise for current indent indications
+          enabled = false,
+        },
+      },
+    },
+  },
+
   -- Theme files for colorscheme.
   {
     "bluz71/vim-nightfly-colors",
