@@ -40,6 +40,9 @@ opt.cursorline = true
 opt.cursorlineopt = "number"
 opt.splitright = true
 opt.splitbelow = true
+-- show all text; higher levels hides brackets and things
+-- I think this is from the lazy vim bundle somewhere, but not sure where
+opt.conceallevel = 0
 
 -- Files -------------------------------------------------------------------
 opt.swapfile = false
