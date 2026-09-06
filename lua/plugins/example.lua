@@ -49,4 +49,12 @@ return {
       require("crates").setup()
     end,
   },
+  -- Enable typescript lsp
+  {
+    "pmizio/typescript-tools.nvim",
+    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+    opts = {
+      publish_diagnostic_on = "change",
+    },
+  },
 }
