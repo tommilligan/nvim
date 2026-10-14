@@ -18,6 +18,9 @@ require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+    -- Go support (gopls, treesitter, formatting, linting). Imported before "plugins" so
+    -- lua/plugins/go.lua can override it.
+    { import = "lazyvim.plugins.extras.lang.go" },
     -- import/override with your plugins
     { import = "plugins" },
   },
